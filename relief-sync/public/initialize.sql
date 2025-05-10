@@ -191,32 +191,35 @@ INSERT INTO volunteer VALUES
 (115, 'Olivia', 'Martinez');
 
 INSERT INTO shelter VALUES 
-(201, ST_PointFromText('POINT(30.2672 -97.7431)')),
-(202, ST_PointFromText('POINT(30.3783 -97.4713)')),
-(203, ST_PointFromText('POINT(30.1852 -97.3174)')),
-(204, ST_PointFromText('POINT(30.7275 -97.8743)')),
-(205, ST_PointFromText('POINT(30.1235 -97.1234)')),
-(206, ST_PointFromText('POINT(30.2950 -97.7401)')),
-(207, ST_PointFromText('POINT(30.3821 -97.4903)')),
-(208, ST_PointFromText('POINT(30.2000 -97.3300)')),
-(209, ST_PointFromText('POINT(30.7500 -97.8800)')),
-(210, ST_PointFromText('POINT(30.1100 -97.1100)'));
+(301, ST_PointFromText('POINT(29.760427 -95.369803)')),
+(302, ST_PointFromText('POINT(32.776475 -79.931051)')),
+(303, ST_PointFromText('POINT(30.695366 -88.039891)')),
+(304, ST_PointFromText('POINT(33.520661 -86.802490)')),
+(305, ST_PointFromText('POINT(32.461000 -93.785000)')),
+(306, ST_PointFromText('POINT(29.951065 -90.071533)')),
+(307, ST_PointFromText('POINT(31.968599 -99.901810)')),
+(308, ST_PointFromText('POINT(30.438255 -84.280733)')),
+(309, ST_PointFromText('POINT(34.000710 -81.034814)')), 
+(310, ST_PointFromText('POINT(35.467560 -97.516428)')); 
 
 
 INSERT INTO disaster_zone VALUES 
-(301, '{type: Triangle, "description": "Zone A coverage"}', '[{"lat": 30.27, "lng": -97.74}, {"lat": 30.28, "lng": -97.75}, {"lat": 30.26, "lng": -97.76}]'),
-(302, '{type: Triangle, "description": "Zone B coverage"}', '[{"lat": 30.89, "lng": -97.64}, {"lat": 30.90, "lng": -97.65}, {"lat": 30.88, "lng": -97.63}]'),
-(303, '{type: Square, "description": "Zone C coverage"}', '[{"lat": 30.55, "lng": -97.34}, {"lat": 30.56, "lng": -97.35}, {"lat": 30.57, "lng": -97.36}], {"lat": 30.54, "lng": -97.33}]'),
-(304, '{type: Square, "description": "Zone D coverage"}', '[{"lat": 30.42, "lng": -97.19}, {"lat": 30.43, "lng": -97.20}, {"lat": 30.44, "lng": -97.21}], {"lat": 30.41, "lng": -97.18}]'),
-(305, '{type: Circle, "description": "Zone E coverage"}', '[{"lat": 30.65, "lng": -97.45}]'),
-(306, '{type: Triangle, "description": "Zone F coverage"}', '[{"lat": 30.31, "lng": -97.61}, {"lat": 30.32, "lng": -97.62}, {"lat": 30.30, "lng": -97.60}]'),
-(307, '{type: Square, "description": "Zone G coverage"}', '[{"lat": 30.75, "lng": -97.88}, {"lat": 30.76, "lng": -97.89}, {"lat": 30.77, "lng": -97.90}, {"lat": 30.78, "lng": -97.91}]');
+(301, '{ "type": "Triangle", "description": "Zone A coverage" }', '[{"lat": 29.760427, "lng": -95.369803}, {"lat": 29.770427, "lng": -95.359803}, {"lat": 29.750427, "lng": -95.379803}]'),
+(302, '{ "type": "Triangle", "description": "Zone B coverage" }', '[{"lat": 32.460976, "lng": -93.745001}, {"lat": 32.470976, "lng": -93.735001}, {"lat": 32.450976, "lng": -93.755001}]'),
+(303, '{ "type": "Square", "description": "Zone C coverage" }', '[{"lat": 30.695366, "lng": -88.039891}, {"lat": 30.705366, "lng": -88.039891}, {"lat": 30.705366, "lng": -88.029891}, {"lat": 30.695366, "lng": -88.029891}]'),
+(304, '{ "type": "Square", "description": "Zone D coverage" }', '[{"lat": 33.520661, "lng": -86.802490}, {"lat": 33.530661, "lng": -86.802490}, {"lat": 33.530661, "lng": -86.792490}, {"lat": 33.520661, "lng": -86.792490}]'),
+(305, '{ "type": "Circle", "description": "Zone E coverage" }', '[{"lat": 30.438255, "lng": -84.280733}]'),
+(306, '{ "type": "Triangle", "description": "Zone F coverage" }', '[{"lat": 29.951065, "lng": -90.071533}, {"lat": 29.961065, "lng": -90.061533}, {"lat": 29.941065, "lng": -90.081533}]'),
+(307, '{ "type": "Square", "description": "Zone G coverage" }', '[{"lat": 32.776475, "lng": -79.931051}, {"lat": 32.786475, "lng": -79.931051}, {"lat": 32.786475, "lng": -79.921051}, {"lat": 32.776475, "lng": -79.921051}]');
 
 INSERT INTO warehouse VALUES 
-(401, 1000, ST_PointFromText('POINT(30.2500 -97.7500)')),
-(402, 800, ST_PointFromText('POINT(30.2400 -97.7600)')),
-(403, 1200, ST_PointFromText('POINT(30.2600 -97.7700)')),
-(404, 900, ST_PointFromText('POINT(30.2700 -97.7800)'));
+(401, 1000, ST_PointFromText('POINT(29.760427 -95.369803)')),
+(402, 800,  ST_PointFromText('POINT(32.509310 -92.119301)')),
+(403, 1200, ST_PointFromText('POINT(34.364730 -89.519562)')),
+(404, 950,  ST_PointFromText('POINT(33.520661 -86.802490)')),
+(405, 1100, ST_PointFromText('POINT(32.840694 -83.632402)')),
+(406, 875,  ST_PointFromText('POINT(30.332184 -81.655647)')),
+(407, 980,  ST_PointFromText('POINT(32.776475 -79.931051)'));
 
 INSERT INTO rs_resource VALUES 
 (501, 500, '2025-12-31 00:00:00', 401, 'Rice', NULL, 'Food'),
@@ -233,9 +236,13 @@ INSERT INTO delivery_drone VALUES
 (605, '2025-04-15', 75);
 
 INSERT INTO charging_bay VALUES 
-(701, ST_PointFromText('POINT(30.2600 -97.7400)'), 4),
-(702, ST_PointFromText('POINT(30.2550 -97.7350)'), 3),
-(703, ST_PointFromText('POINT(30.2650 -97.7450)'), 5);
+(701, ST_PointFromText('POINT(29.951065 -90.071533)'), 4),
+(702, ST_PointFromText('POINT(31.463772 -100.437037)'), 3),
+(703, ST_PointFromText('POINT(33.836082 -81.163727)'), 5),
+(704, ST_PointFromText('POINT(30.695366 -88.039891)'), 4),
+(705, ST_PointFromText('POINT(35.149532 -90.048981)'), 6),
+(706, ST_PointFromText('POINT(27.800583 -97.396378)'), 3),
+(707, ST_PointFromText('POINT(32.735687 -97.108070)'), 5);
 
 INSERT INTO supplier VALUES 
 (801, '123 Relief Way, Austin, TX', '2025-04-01'),
@@ -299,11 +306,11 @@ INSERT INTO charges_in VALUES
 (701, 605);
 
 INSERT INTO delivers_to VALUES 
-(101, 601, ST_PointFromText('POINT(30.2700 -97.7450)'), '2025-04-16 11:00:00'),
-(102, 602, ST_PointFromText('POINT(30.2800 -97.7400)'), '2025-04-16 12:30:00'),
-(103, 603, ST_PointFromText('POINT(30.2850 -97.7450)'), '2025-04-16 13:00:00'),
-(104, 604, ST_PointFromText('POINT(30.2900 -97.7500)'), '2025-04-16 13:30:00'),
-(105, 605, ST_PointFromText('POINT(30.2950 -97.7550)'), '2025-04-16 14:00:00');
+(101, 601, ST_PointFromText('POINT(29.760427 -95.369804)'), '2025-04-16 15:00:00'),
+(102, 602, ST_PointFromText('POINT(32.776665 -96.796989)'), '2025-04-16 15:30:00'),
+(103, 603, ST_PointFromText('POINT(36.162664 -86.781602)'), '2025-04-16 16:00:00'),
+(104, 604, ST_PointFromText('POINT(30.332184 -81.655647)'), '2025-04-16 16:30:00'),
+(105, 605, ST_PointFromText('POINT(35.467560 -97.516426)'), '2025-04-16 17:00:00');
 
 INSERT INTO requests VALUES 
 (101, 501, '2025-04-15 15:00:00', 25),
@@ -313,19 +320,19 @@ INSERT INTO requests VALUES
 (105, 505, '2025-04-14 13:00:00', 25);
 
 INSERT INTO distributes_to VALUES 
-(101, 201, 'Food', 25, '2025-04-16 13:00:00'),
-(102, 202, 'Medicine', 30, '2025-04-16 14:30:00'),
-(103, 203, 'Water', 20, '2025-04-16 15:00:00'),
-(104, 204, 'Food', 15, '2025-04-16 15:30:00'),
-(105, 205, 'Medicine', 25, '2025-04-16 16:00:00');
+(101, 301, 'Food', 25, '2025-04-16 13:00:00'),
+(102, 302, 'Medicine', 30, '2025-04-16 14:30:00'),
+(103, 303, 'Water', 20, '2025-04-16 15:00:00'),
+(104, 304, 'Food', 15, '2025-04-16 15:30:00'),
+(105, 305, 'Medicine', 25, '2025-04-16 16:00:00');
 
 INSERT INTO located_in VALUES 
-(301, 201),
-(302, 202),
-(303, 203),
-(304, 204),
-(305, 205),
-(306, 206);
+(301, 301),
+(302, 302),
+(303, 303),
+(304, 304),
+(305, 305),
+(306, 306);
 
 SELECT * FROM VOLUNTEER;
 SELECT * FROM SHELTER;

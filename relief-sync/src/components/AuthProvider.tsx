@@ -3,8 +3,12 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 
 interface AuthContextType {
-  creds: any | null;
-  setCreds: (creds: any | null) => void;
+  creds: {
+    username: string;
+    password: string;
+    role: string;
+  } | null;
+  setCreds: (creds: AuthContextType['creds']) => void;
   logout: () => void;
   loading: boolean;
 }
@@ -17,7 +21,7 @@ const AuthContext = createContext<AuthContextType>({
 });
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
-  const [creds, setCredsState] = useState<any | null>(null);
+  const [creds, setCredsState] = useState<AuthContextType['creds']>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -25,16 +29,16 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     if (saved) {
       setCredsState(JSON.parse(saved));
     }
-    setLoading(false); // Hydration complete
+    setLoading(false);
   }, []);
 
-  const setCreds = (c: any | null) => {
-    if (c) {
-      localStorage.setItem('dbCreds', JSON.stringify(c));
+  const setCreds = (creds: AuthContextType['creds']) => {
+    if (creds) {
+      localStorage.setItem('dbCreds', JSON.stringify(creds));
     } else {
       localStorage.removeItem('dbCreds');
     }
-    setCredsState(c);
+    setCredsState(creds);
   };
 
   const logout = () => {
