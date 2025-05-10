@@ -20,16 +20,14 @@
     ```
     npm run dev
     ```
-* Set up a MySQL server, and change ```username``` and ```password``` in ```index.py``` to the proper values for your SQL connection
+* Set up a MySQL server and create a user with full permissions. Remember the sign-in info, as this is how you will create the other users for the application
 * Run the SQL file, ```initalize.sql```
 
 Open http://localhost:3000 in any browser to see the webpage
 
-Open http://127.0.0.1:8000/api/py/helloFastApi to see the result of running
+# Setting up user roles
 
-    ```sql
-    SELECT * FROM volunteers;
-    ```
+* Sign in as an admin account, and then create new users for each role. You can now sign in to each user role page by signing in with this login info.
 
 # Possible Common Errors
 
@@ -37,6 +35,6 @@ Open http://127.0.0.1:8000/api/py/helloFastApi to see the result of running
 
 # Usage
 
-To use the app, navigate to ```localhost:3000```. If you're signed in to your database on the app, then you'll be automatically redirected to a page where you can input any arbitrary queries. Otherwise, you'll be redirected to a sign-in page.
+To use the app, navigate to ```localhost:3000```.
 
 You should use whatever credentials you use for your MySQL server connection. For the database field, use ```relief_sync```
